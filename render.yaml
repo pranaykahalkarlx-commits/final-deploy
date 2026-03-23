@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-receptionist-server
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: RESEND_API_KEY
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
